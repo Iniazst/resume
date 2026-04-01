@@ -1,0 +1,270 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --accent: #2563eb;
+  --accent-light: #eff6ff;
+  --text: #1e293b;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --bg: #f8fafc;
+  --white: #ffffff;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 2rem 1rem;
+}
+
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* ── Header ── */
+.header {
+  background: var(--accent);
+  color: var(--white);
+  padding: 2.5rem 3rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+.header-info h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.header-info .title {
+  font-size: 1.1rem;
+  opacity: 0.88;
+  margin-top: 0.25rem;
+}
+
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.contact-row a,
+.contact-row span {
+  color: rgba(255, 255, 255, 0.92);
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.contact-row a:hover {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+/* ── Body ── */
+.body {
+  padding: 2.5rem 3rem;
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 2.5rem;
+}
+
+/* ── Section shared ── */
+.section {
+  margin-bottom: 2rem;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.section-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent-light);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1.1rem;
+}
+
+/* ── Summary ── */
+.summary p {
+  color: var(--muted);
+  font-size: 0.97rem;
+}
+
+/* ── Experience / Education ── */
+.entry {
+  margin-bottom: 1.4rem;
+}
+
+.entry:last-child {
+  margin-bottom: 0;
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.entry-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.entry-date {
+  font-size: 0.82rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.entry-sub {
+  font-size: 0.88rem;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+
+.entry ul {
+  padding-left: 1.1rem;
+  margin-top: 0.35rem;
+}
+
+.entry li {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 0.2rem;
+}
+
+/* ── Sidebar ── */
+.sidebar .section-title {
+  font-size: 0.72rem;
+}
+
+/* ── Skills ── */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+}
+
+/* ── Languages ── */
+.lang-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.55rem;
+  font-size: 0.9rem;
+}
+
+.lang-level {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+/* ── Projects ── */
+.project-item {
+  margin-bottom: 1rem;
+}
+
+.project-item:last-child {
+  margin-bottom: 0;
+}
+
+.project-name {
+  font-weight: 600;
+  font-size: 0.93rem;
+}
+
+.project-name a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.project-name a:hover {
+  text-decoration: underline;
+}
+
+.project-desc {
+  font-size: 0.87rem;
+  color: var(--muted);
+  margin-top: 0.15rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .header {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .body {
+    padding: 1.75rem 1.5rem;
+    grid-template-columns: 1fr;
+  }
+
+  .header-info h1 {
+    font-size: 1.5rem;
+  }
+
+  .avatar {
+    width: 72px;
+    height: 72px;
+    font-size: 1.8rem;
+  }
+}
+
+@media print {
+  body {
+    padding: 0;
+    background: var(--white);
+  }
+
+  .page {
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
